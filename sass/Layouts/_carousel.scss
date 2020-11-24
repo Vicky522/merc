@@ -1,0 +1,19 @@
+.carousel-item{
+    .carousel-caption{
+    right: 80%;
+    bottom: 70%;
+     
+     text-align: left;
+     width: 100%;
+
+
+     h1{
+         width: 30%;
+     }
+
+     button{
+         color: $color-white-0;
+         @include styleButton(#333333, 1px solid #333333,null,7px,20px);
+     }
+    }
+}

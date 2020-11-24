@@ -8,12 +8,12 @@
         p{
             // margin-right: 30px;
         }
-        
-        // <576
+    } 
+    
+    // <576
     @include responsive('small'){
         p{
             display: block;
         }
-    }
     }
 }

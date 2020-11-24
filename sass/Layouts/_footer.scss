@@ -21,7 +21,7 @@ footer{
 
 
         li a{
-            color: $color-white-0;
+            color: #999999;
             text-decoration: none;
             transition: all .5s;
         }
@@ -34,6 +34,12 @@ footer{
 
     .topic__text{
         padding: 0;
+
+        a{
+           
+                color: #999999;
+            
+        }
     }
 
     .topicHr{
@@ -42,6 +48,66 @@ footer{
         margin: 30px -1px;
        
         border-bottom: 0.5px solid $color-gray-3;
+    }
+
+    // stay
+    .footer__stay{
+        color: #999999;
+        
+        h2{
+            color: $color-white-0;
+        }
+
+        .stay__form{
+            input{
+                background-color: $color-gray-2;
+                color: $color-white-0;
+                border: none;
+                border-radius: 0;
+            }
+            button{
+                background-color: $color-black-2;
+                color: #999999;
+                border: none;
+            }
+        }
+
+        .stay__right{
+            ul{
+                display: flex;
+                li{
+                    list-style-type: none;
+                    margin-right: 40px;
+                }
+                a{
+                    color:#999999;
+                    font-size: 24px;
+                    transition: all .5s;
+                }
+                a:hover{
+                    color: $color-blue-1;
+                }
+            }
+        }
+    }
+
+    // img
+    .footer__img{
+       
+        img{
+            width: 100%;
+        }
+    }
+
+    // advance
+    .footer__advance{
+        ul li{
+            display: inline;
+        }
+
+        .advance__right li{
+            margin-right: 10px;
+        }
     }
 
     // menu
@@ -55,8 +121,11 @@ footer{
             width: 274px;
             background-color: $color-black-2;
             list-style-type: none;
+
             transform: translateX(230px);
             transition: all .7s;
+
+            margin-bottom: 2px;
         }
 
         ul li:hover{
@@ -88,31 +157,65 @@ footer{
             }
         }
     }
-        // <576
-        @include responsive('small'){
-            .footer__menu{
-                right: 100%;
-                bottom: 0 ;
-                
-                ul{
-                    display: flex;
-                    width: 100%;
-                }
-
-                ul li{
-                    width: 25%;
-                    text-align: center;
-                    transform: translateX(0);
-                }
-
-               
-
-                span{
-                    display: none;
-                }
-            }
-
-           
+    
+    // <576
+    @include responsive('small'){
+        .footer__menu{
+            display: none;
         }
+    }
+
+    // menuMobile
+    .footer__menuMobile{
+       position: fixed;
+       bottom: 10px;
+        left: 0;
+        opacity: 0;
+        width: 100%;
+       ul{
+           display: flex;
+           justify-content: center;
+           width: 100%;
+          
+       }
+
+       li{
+           
+           list-style-type: none;
+
+           text-align: center;
+           background-color: $color-black-2;
+
+           border-top-left-radius: 3px;
+           margin-right: 3px;
+           a{
+               color: $color-white-0;
+    
+           }
+
+           i{
+            font-size: 22px;
+            height: 44px;
+            line-height: 44px;
+           }
+
+           span{
+               display: block;
+            line-height: 20px;
+            margin-top: -8px;
+            text-align: center;
+            width: 100%;
+           }
+       }
+    }
+
+   
+
+    // <576px
+    @include responsive('small'){
+        .footer__menuMobile{
+            opacity: 1;
+        }
+    }
 }
 

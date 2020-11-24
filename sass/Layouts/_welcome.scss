@@ -39,9 +39,13 @@
         }
 
         button{
-            @include styleButton($color-blue-1, 1px solid $color-blue-1, 1px ,12px, 6px );
+            @include styleButton(#00adef, 1px solid #00adef, 1px ,12px, 6px );
             color: $color-white-0;
            margin-top: 40px;
+        }
+
+        button:hover{
+            background-color: #0088c6;
         }
     }
 
